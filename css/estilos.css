@@ -1,0 +1,354 @@
+/*header{
+    background: pink;
+    color: red;
+    font-family: nombre de fuente -> sirve para cambiar el estilo de texto.
+    line-height: alto de linea
+    font-size :para asignar el tamaño de la fuente
+    font-weight: peso de fuente (100-900 , normal 400, bold 600)
+    font-style: normal, iralic, etc estilo de fuente
+    letter-spacing: espacio entre lineas se recomienda que sea negativo -.2px
+    text-transform: cambiar todo a mayusculas o minusculas;
+    text-decoration: underline //decorado del parrafo
+}*/
+
+
+body{
+    font-family:  'Baloo Thambi 2', cursive;
+    margin: 0px;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Comic Neue', cursive;
+}
+
+h1{
+    font-size: 40px;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: white;
+    /*text-transform: uppercase;
+    text-decoration: underline;*/
+   /* margin: top right bottom left;*/
+    /* margin: 100px 500px 70px 30px;*/
+    /*margin: auto;/*/
+    margin: 0;
+}
+
+h1 strong{
+    color: #026fff;
+}
+h2 {
+    color: #026fff;
+    text-transform: uppercase;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+
+.project{
+    /*border-top: 10px solid red;
+    border-right: 10px solid green;
+    border-left: 10px solid blue;
+    border-bottom: 10px solid black;
+    border-color: rebeccapurple;
+    border-width: 15px;
+    border-style: solid;
+    border-top-color: saddlebrown;
+    border-top-style: solid;*/
+
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 20px;
+    
+    background: white;
+   
+    /* border-top-left-radius: 50px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 25px;*/
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.project-title{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-course, .project-date, .project-url, project{
+    margin: 10px 0px;
+}
+.project-description{
+
+font-size: 20px;
+}
+
+
+.project-details{
+    width: 500px;
+}
+
+.project-strong{
+    font-family: 'Comic Neue', cursive;
+}
+.project-imageContainer{
+    width: 500px;
+}
+
+.hero{
+    height: 300px;
+    /**/
+    
+    background-size: 600px 300px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: #1b2127;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.header{
+    background-color: #1b2127;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+
+}
+.header a{
+    color: white;
+    text-decoration: none;
+   
+    
+}
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu{
+    height: inherit;
+}
+
+.header ol {
+    display: flex;
+    height: 90px;
+    height: inherit;    
+    align-items: center;
+    height: inherit;
+}
+
+header ol li {
+    height: inherit;
+
+}
+.header a{
+    display: block;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+figure{
+    margin: 0;
+}
+
+.portfolio{
+
+    background: #fafafa;
+    padding: 20px;
+
+}
+
+.flexbox{
+    display: flex;
+    height: 400px;
+    flex-wrap: wrap;
+    /*flex-wrap: nowrap;
+    flex-wrap: wrap;
+    /*flex-direction: column;
+    flex-direction: row;*/
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+  /* justify-content: space-between; /*espaciado en elementos menos los costados*/
+    justify-content: space-evenly;/*mismo espaciado entre todos*/
+    justify-content: space-around;/*espacio en los costados la mitad, los demas igual*/
+    align-items: flex-start;
+    align-items: flex-end;
+    border: 1px solid blue;
+    align-items: center;
+    /*flex-direction: column;*/
+}
+
+.box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    flex-shrink: 0;
+    margin: 10px    ;
+}
+.footer {
+    background-color: #1b2127;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.twi{
+color: #026fff;
+text-decoration: none;
+
+}
+.footer img	{
+    vertical-align: middle;
+}
+.footer a{
+    color: aqua;
+}
+.event  {
+    
+    margin: 10px;
+    width: 480px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    
+}
+
+.event-list, container{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.event-details{
+    margin: 20px 40px;
+    background-color: white;
+    margin-top: -40px;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.event-description{
+    text-align: left;
+}
+.event img {
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+
+}
+.event-url{
+    border: 1px solid blue;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: blue;
+}
+.event-list-t {
+    margin-left: 20px;
+ 
+
+}
+.contact {
+    color: white;
+    background-color: #026fff;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social {
+    
+}
+.social-link{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-link.twitter{
+    background-image: url(../imagenes/icono.png);
+    background-size: 50px 50px;
+}
+.social-link.facebook{
+    background-image: url(../imagenes/icono.png);
+    background-size: 50px 50px;
+}
+.social-link.github{
+    background-image: url(../imagenes/icono.png);
+    background-size: 50px 50px;
+}
+.social-link.instagram{
+    background-image: url(../imagenes/icono.png);
+    background-size: 50px 50px;
+}
+
+.form-email input{
+    border-color: gray;
+    padding: 10px 20px 10px 25px;
+    background-image: url(../imagenes/abyss.jpg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.form-email button {
+    display: block;
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 7px;
+    width: 100px;
+    margin: 10px auto;
+    margin-top: 10px;
+}
+.form-email h3{
+    font-family: 'Courier New', Courier, monospace;
+}
+.container {
+    
+    width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+   
+}
+.event-list .container{
+    flex-wrap: wrap;
+}
+
+/*desktop first que empieces desde el MQ más grande*/
+@media screen and (max-width: 1024px){
+
+}
+@media screen and (max-width: 766px){
+    body{
+        border: 20px solid forestgreen;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+}
+@media screen and (max-width: 320px){
+    
+}

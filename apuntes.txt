@@ -1,0 +1,94 @@
+Responsive Design
+-------------------
+Son todas esas técnicas que usamos para adaptar nuestras aplicaciones web a la mayor cantidad de pantallas.
+Patrones en Responsive Design : Son Aplicados desde el 2011.
+
+Tecnicas de Responsive
+.........................
+Mostly Fluid : Cuando ya no alcanza, el sitio web se pone a adaptar.
+Colocación de columnas: Toma todo el tamaño y se va adaptando , segun van quepando
+Layout Shifter: Tiene uno de los elementos como columna, y en algun momento pasa a la parte superior.
+Tiny Tweaks: pequeños cambios.
+Off canvas: fuera del lienzo.
+Viewport: El área visible del Navegador.
+
+Portrait-Landscape:
+En los telefonos Vertical y Horizontal.
+
+Mobile First: Empezar el website dese la menor resolución aceptada.
+Desktop First: Empezar el website desde la mayor resolución de pantalla
+
+viewport:
+meta:vp  -> emmet para viewport 
+
+Unidades Relativas de medida
+..............................
+Porcentaje: longitud referente al tamaño de los elementos padre.
+em: Unidad relativa al tamaño de fuente especificada más cercano.
+    <nav> font-size:16px;
+        <ul> font-size: 1em;
+            <li> font-size:2em
+                <a href=""></a> font-size: .5em 16px, padding:2em 32px. 
+                -> ya que un elemento .5em toma 16 px -> lo toma 16px como 1em
+            </li>
+        </ul>
+    </nav>
+
+rem: Unidad relativa al tamaño de fuente especificada en el ancestro más lejano (html o bosy)
+
+
+<html lang="en"> font-size: 32px
+<body>           font-size: 16px    
+    <ul>         font-size: 2rem   -> 64px
+        <li>     font-size: 1rem   ->32px
+        <a href=""> font-size .5rem 16px
+        </a>
+        </li>
+    </ul>
+</body>
+</html>
+
+vw /vh: Unidad relativa porcentual con respeto al Viewport: respecto al tamaño de la pantalla actualmente.
+100vw =1024px
+100vh= 437px
+
+Media queries
+...................
+Gracias a este mòdulo de Css existe Responsive Design
+Modulo CSS3 que permite adaptar la representación del contenido a caracteristicas del dispositivo.
+
+
+@media media type and(conditición){} -> se compone de una media type y una o más condiciones
+@media screen and(max-width:768px){
+
+} -> Todas las pantallas con un ancho inferior o igual a  768px cumplen esta condición.
+@media screen and (max-width:768px) and (min-width:480px){} Todas las pantalla con un ancho de 480px hasta 768px cumplen esta condición
+
+Mobile First
+.............
+@media screen and (min-width: 320px){}
+@media screen and (min-width: 480ox){}
+@media screen and (min-width: 768px){}
+@media screen and (min-width: 1024px){}
+
+Usa min-width
+                    min-width = desde
+
+                    desde el min-width a más 
+
+
+Desktop First
+................
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 480px) {}
+@media screen and (max-width: 320px) {}
+
+usa max-width
+                     max-width = hasta
+                     desde cero hasta el max-width
+
+Condiciones 
+----------------------------------
+<link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)">
+Cuando cumpla la condicion se traera la hoja de estilos
