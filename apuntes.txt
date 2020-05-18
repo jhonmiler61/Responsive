@@ -322,3 +322,5 @@ menu.classList.contains('is-active') -> ver si documnet.querySelector('.menu') c
 node.js -> istalar para servidor estatico
 npm -v -> para ver la version;
 npm install -g static-server -> instala de manera global static-server
+-> nos ubicamos en la carpeta
+static-server -> prendemos el servidor

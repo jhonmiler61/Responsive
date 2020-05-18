@@ -396,7 +396,10 @@ text-decoration: none;
     left: 5px;
     top: 5px;
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1023px){
+    .event-list-title{
+        margin-left: 0;
+    }
     .hero{
         height: auto;
         position: relative;
@@ -422,6 +425,10 @@ text-decoration: none;
     
 }
 @media screen and (max-width: 789px){
+    h2{
+        font-size: 1.2em;
+        margin: .5em 0;;
+    }
     .burger-button{
         display: block;
     }
@@ -484,7 +491,7 @@ text-decoration: none;
 
     }
     .project-description{
-        font-size: .8em;
+        font-size: 1em;
 
     }
     .event{
@@ -557,6 +564,11 @@ text-decoration: none;
     h1{
         font-size: 1.5em;
         z-index: 2;
+    }
+    .social-link{
+        width: 40px;
+        height: 40px;
+        background-size: 100%;
     }
 }
 @media screen and (max-width: 320px){
