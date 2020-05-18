@@ -92,3 +92,233 @@ Condiciones
 ----------------------------------
 <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)">
 Cuando cumpla la condicion se traera la hoja de estilos
+
+flex-wrap: wrap; -> Los elemntos son colocados en varias lineas
+Edit -> Togle block comment -> SHIFT + ALT + AL
+Comenta un grupo de Texto
+
+Edit -> control + Ç -> para comentar
+
+width: 100 % -> toma el 100 %
+
+display: flex;
+flex: 1; Toma todo el ancho que pueda
+height: auto : Sirve para resetear valores
+display: initial; -> Nos permite tener valores por defecto que tenia el elemento
+width: auto; toma todo el tamaño
+flex-shrink : 1 -> permite que ocupe solo la pantalla y no rompa
+cuando hay espacios collapcien blancos
+border: 0.1px solid black,
+padding: 0.1px
+
+Posiciones
+--------------------
+static
+relative
+absolute
+fixed
+sticky
+
+->con cualquier posicion que no sea static;
+se desbloquea
+z-index
+top right botton left;
+
+
+position: relative;
+left: 10px; -> Se mueve a la izquierda 10px
+Rigth: 10px -> Se mueve ña derechas  10px;
+botton: 10px -> se Mueve abajo 10px;
+top:-10px se mueve -10 px la parte de arriba
+
+
+section{
+    position: relative;
+}
+spam{
+    position: absolute;
+    right: 0; -> Se coloca al lado derecho , respecto a la caja de section, se coloca al elemento mas cercano con position relative;
+}
+
+z-index: 1 -> se ponen encima
+pueden tomar valores 1, 2, 3 ,4 ...
+
+position: fixed; -> queda totalmente rompiendo el absolute
+top: 0; -> se queda pegado en la parte superior usado para menus,
+bottom: 0 Se queda pegado a la aprte de abajo.
+right: 0 -> se queda pegado a la derecha;
+left: 0 -> se queda pegado a la izquierda;
+
+.............
+Se puede :
+position: fixed;
+top: 0;
+right: 0; 
+-> hacia la dereche superior
+
+
+
+position: sticky;
+top: 0 ;
+z-index:1;
+-> Al llegar a la parte de bajo donde esta el elemento este se pega y baja con nostros
+
+
+    .hero{
+        height: auto;
+        position: relative;
+        
+    }
+    h1{
+        font-size: 2em;
+        z-index: 2;
+    }
+    .hero-image {
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    -> el elemento hero-image , se le coloca position absolute -> lo cual toma como referencia al elemento con relative mas cercano que seria  .hero
+    con right:0 left:0 top:0 bottom:0 hacemos que se estire al tamaño del elemento hero.
+
+    overflow: hidden; -> para que no se desvorde
+
+
+    <video src=""> -> Sirve para agregar videos mp4 generalmente
+
+    <source src="">-> Generalmente optro tipo de formatos de video para el navegador
+    controls -> muestra los controles
+    <iframe src="" frameborder="0"></iframe>
+    nos permite inserta cualquier contenido de otr pagina
+
+    para poder hacer responsive un video iframe
+
+    <div class="flexible-video">
+        <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/Srqs4CitU2U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+   
+
+.youtube-video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+.flexible-video{
+    width: 100%;
+    height: 0;
+    padding-top:56.25% ;
+    background: blue;
+    z-index: 1;
+    position: relative;
+}
+[class^="icon-"], [class*=" icon-"]{
+    font-famyly: ;
+}
+
+width: 100vw;
+height: 100vh;
+
+left: -100vw; -> nos permite ocultar
+
+
+left: 0;
+transition: .3s;
+lo muestra en 03 s 
+
+javaScript
+-----------
+console.log('Hola Mundo'); -> nos permite imprimir
+document.querySelector('.menu') -> selecciona el elemento con esa clase
+
+console.log(document.querySelector('.menu'));
+
+
+.menu.is-active{
+    Se activa cuando elemento tiene ambas clases
+}
+document.querySelector('.menu').classList.add('is-active')
+
+document.querySelector('.menu').classList.add('is-active')
+-> agregamos a .menu la clase .is-active
+
+
+crear variables
+.............
+const menu = document.querySelector('.menu');
+const menu = document.querySelector('.menu');
+se puede llamar
+menu.classList.add('.is-active')
+
+burgerButton.addEventListener('evento',funcion)
+-> permite agregar un efvento
+addEventListener('click', funcion())
+
+
+function hideShow(){
+ menu.classList.add('is-active')
+ agregamos las clase is-active a elemento seleccionado en menu
+};
+
+menu.classList.remove('is-active') -> remueve la clase 'is-active' del elemento menu (document.querySelector('.menu'))
+
+
+menu.classList.contains('is-active') -> ver si documnet.querySelector('.menu') contiene la clase ('is-active')
+
+     burgerButton.addEventListener('click',hideShow);
+      
+        function hideShow(){
+            if(menu.classList.contains('is-active')){
+                menu.classList.remove('is-active')
+            }
+            else{
+                menu.classList.add('is-active')
+
+            }
+        };
+
+        dentro de la funcion hay un if que verifica si .menu contiene la clases is-active, si lo tiene con menu.classList.remove('is-active') lo remueve la clase, pero si no tiene con la clase
+        menu.classList.add('is-active') -> agrega la clase a .menu
+
+        const ipad = window.matchMedia('screen and (max-width: 789px)');
+
+        creamos la constante ----
+
+        ipad.addListener(validation);
+
+        ve si se cumple y ejecuta la funcion validarin
+        
+        function validation(event){
+            console.log(event.matches);
+        }
+
+        imprime el evento
+
+                function validation(event){
+            console.log(event.matches);
+            if(event.matches){
+                burgerButton.addEventListener('click',hideShow);
+                /agregamos el event listener/
+
+            }
+
+            else{
+                burgerButton.removeEventListener('click',hideShow);
+                /quitamos el event listener/
+            }
+
+
+        }
+
+node.js -> istalar para servidor estatico
+npm -v -> para ver la version;
+npm install -g static-server -> instala de manera global static-server
